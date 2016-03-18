@@ -38,7 +38,16 @@ func main() {
 	flag.Parse()
 
 	gin.DefaultWriter = colorable.NewColorableStderr()
+
 	r := gin.Default()
+	r.Use(gin.Logger())
+	r.LoadHTMLGlob("templates/*.tmpl.html")
+	r.Static("/static", "static")
+
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(200, "index.tmpl.html", nil)
+	})
+
 	r.POST("/v1/slack/inbound", func(c *gin.Context) {
 		var msg IncommingMesage
 		err := c.Bind(&msg)
