@@ -2,11 +2,12 @@ package main
 
 import (
 	"flag"
-	"github.com/gin-gonic/gin"
-	"github.com/mattn/go-colorable"
 	"os"
 	"regexp"
 	"strings"
+
+	"github.com/gin-gonic/gin"
+	"github.com/mattn/go-colorable"
 )
 
 type IncommingMesage struct {
