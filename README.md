@@ -1,4 +1,4 @@
-# deeeet-slackbot
+# deeeet-bot
 
 ![](http://go-gyazo.appspot.com/ee747efcf38afdee.png)
 
