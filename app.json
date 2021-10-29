@@ -2,7 +2,7 @@
   "name": "deeeet-bot",
   "description": "deeeet です...",
   "repository": "https://gitlab.com/go-book2016/deeeet-slackbot.git",
-  "image": "heroku/go:1.6",
+  "image": "heroku/go:1.16",
   "mount_dir": "src/gitlab.com/go-book2016/deeeet-slackbot",
   "logo": "https://gitlab.com/uploads/project/avatar/978410/gogog.png",
   "keywords": ["golang"]
