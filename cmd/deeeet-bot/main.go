@@ -51,9 +51,9 @@ func main() {
 	r.GET("/verify/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		if name != "deeeet" {
-			c.JSON(200, "deeeet です...")
+			c.String(200, "deeeet です...")
 		} else {
-			c.JSON(200, "はい...")
+			c.String(200, "はい...")
 		}
 	})
 
