@@ -48,6 +48,15 @@ func main() {
 		c.HTML(200, "index.tmpl.html", nil)
 	})
 
+	r.GET("/verify/:name", func(c *gin.Context) {
+		name := c.Param("name")
+		if name != "deeeet" {
+			c.JSON(200, "deeeet です...")
+		} else {
+			c.JSON(200, "はい...")
+		}
+	})
+
 	r.POST("/v1/slack/inbound", func(c *gin.Context) {
 		var msg IncommingMesage
 		err := c.Bind(&msg)
